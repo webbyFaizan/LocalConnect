@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bookings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>Your Bookings</h2>
+  <a href="index.html">Back</a>
+</header>
+
+<div class="container">
+  <div id="bookingList"></div>
+</div>
+
+<script src="app.js"></script>
+<script>
+const container = document.getElementById("bookingList");
+
+container.innerHTML = state.bookings.map(b => {
+  const service = state.services.find(s => s.id === b.serviceId);
+  return `<p>${service?.title} - ${b.date} ${b.time}</p>`;
+}).join("");
+</script>
+
+</body>
+</html>
