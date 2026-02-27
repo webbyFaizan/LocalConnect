@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LocalConnect Pro</title>
-  <link rel="stylesheet" href="style.css">
+  <title>LocalConnect</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
   <h2>LocalConnect</h2>
-  <div>
+  <nav>
     <a href="dashboard.html">Dashboard</a>
     <a href="bookings.html">Bookings</a>
     <a href="#" onclick="logout()">Logout</a>
-  </div>
+  </nav>
 </header>
 
 <div class="container">
   <h2>Explore Services</h2>
-  <div id="servicesContainer" class="grid"></div>
+  <div id="services" class="grid"></div>
 </div>
 
 <div id="modal" class="modal hidden"></div>
 
-<script src="app.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>

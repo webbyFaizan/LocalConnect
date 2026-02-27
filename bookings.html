@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bookings</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-  <h2>Your Bookings</h2>
-  <a href="index.html">Back</a>
+  <h2>Provider Dashboard</h2>
+  <nav>
+    <a href="index.html">Explore</a>
+    <a href="#" onclick="logout()">Logout</a>
+  </nav>
 </header>
 
 <div class="container">
-  <div id="bookingList"></div>
+  <h3>Add Service</h3>
+  <input id="title" placeholder="Title">
+  <input id="category" placeholder="Category">
+  <input id="price" placeholder="Price">
+  <input id="image" placeholder="Image URL">
+  <button class="btn" onclick="addService(title.value, category.value, price.value, image.value)">
+    Add
+  </button>
 </div>
 
-<script src="app.js"></script>
-<script>
-const container = document.getElementById("bookingList");
-
-container.innerHTML = state.bookings.map(b => {
-  const service = state.services.find(s => s.id === b.serviceId);
-  return `<p>${service?.title} - ${b.date} ${b.time}</p>`;
-}).join("");
-</script>
-
+<script src="js/app.js"></script>
 </body>
 </html>
